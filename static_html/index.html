@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <title>Arches | Home</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="https://arcade-test.lincoln.gov.uk/media/img/favicon.png" />
+
+    <link rel='stylesheet' type='text/css' href='http://localhost:8000/media/css/arches.css' />
+    <link href="../lincoln/lincoln/media/css/header.css" rel="stylesheet" />
+    <link href="../lincoln/lincoln/media/css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../lincoln/lincoln/media/fontello/css/arches-arcade.css" />
+</head>
+
+<body id="top" data-spy="scroll" >
+  <!-- header -->
+  <header>
+    <nav role="nav" >
+      <div class="navbar-brand" ><img src="../lincoln/lincoln/media/img/landing/arcade_logo.png" /></div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#intro" ><i class="aa-icon-home" aria-hidden="true"></i> About</a></li>
+        <li><a href="https://arcade-test.lincoln.gov.uk/search">Search</a></li>
+        
+        <!-- ko if: showAuthMenu -->
+          <li><a href="https://arcade-test.lincoln.gov.uk/user">User Profile</a></li>
+          <li><a href="https://arcade-test.lincoln.gov.uk/auth/?next=/index.htm">Logout</a></li>
+        <!-- /ko -->
+        
+        <!-- ko ifnor: showAuthMenu -->
+          <li><a href="r">Request Access</a></li>
+          <li><a href="https://arcade-test.lincoln.gov.uk/auth/?next=/index.htm">Login</a></li>
+        <!-- /ko -->
+      </ul>
+      <!-- /.navbar-nav -->
+    </nav>
+    <!-- /.navbar -->
+  </header>
+  <!-- /header -->
+  
+  <!-- Intro Section -->
+  <section class="intro" >
+    <div class="image" >
+      <img src="https://arcade-test.lincoln.gov.uk/media/img/landing/Lincoln_Land.jpg" >
+      <div id="intro" class="caption text-center">
+        <div class="container">
+          <div class="aa-icon-map">
+            <p>The online heritage information and management system for the City of Lincoln</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- section.blurb -->
+  <section class="blurb" >
+    <div class="container text-center" >
+      <p>Arcade lets you explore Lincoln’s rich heritage in new ways – from an individual historic building, to the
+      development of the Roman city of Lindum Colonia. Explore the Arcade site and use our powerful
+      search engine to discover more about this ancient city.</p>
+      <p>Click one of the buttons below to find out about the ways you can search Arcade.</p>
+
+      <div class="row callouts" >
+        <div class="col-md-4" >
+          <a class="btn btn-outline btn-default" href="#search-styles" role="button"><i class="aa-icon-map" ></i>Map Search &gt;</a>
+        </div>
+        <div class="col-md-4" >
+          <a class="btn btn-outline btn-default" href="#search-styles" role="button"><i class="aa-icon-stopwatch" ></i>Time Search &gt;</a>
+        </div>
+        <div class="col-md-4" >
+          <a class="btn btn-outline btn-default" href="#search-styles" role="button"><i class="aa-icon-relationship" ></i>Relationships &gt;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /section.blurb -->
+  
+  <!--Title bar -->
+  <div id="search-styles" class="title-bar">
+    <div class="container" >
+      <div class="row" >
+        <h2 class="aa-icon-help-circled">Help / Search styles</h2>
+      </div>
+    </div>
+  </div>
+  
+  <!-- .search-styles -->
+  <section class="col-layout">
+    <div class="container">
+      <div class="row" >
+        <div class="col-md-5">
+          <h3>Search Styles</h3>
+          <p>Arcade lets you explore Lincoln&apos;s rich heritage in new ways &dash; from an individual historic building, to the development of the
+            Roman city of Lindum Colonia. Explore the Arcade site and use our powerful search engine to discover more about this ancient city</p>
+        </div>
+        <div class="callouts col-md-5 col-md-offset-2 col-xs-9 col-xs-offset-3">
+          <div id="map-search" >
+            <h4 class="aa-icon-map" >Map Search</h4>
+            <p>See at a glance how Lincoln’s Heritage appears near you, and try out some of our powerful search techniques &dash; choose a keyword,
+              draw a net, or pick a postcodet</p>
+          </div>
+          <div id="time-search" >
+            <h4 class="aa-icon-stopwatch" >Time Search</h4>
+            <p>Use our innovative &quot;Time Wheel&quot; to narrow down your search by the century or the decade. Or pick a start date and an end date
+              to define a period of your choice</p>
+          </div>
+          <div id="relationships" >
+            <h4 class="aa-icon-relationship" >Relationships</h4>
+            <p>Lincoln&apos;s heritage is defined by connectivity and relationships. With its graphical database system, Arcade lets you see at a glance how
+              a building is connected to an architect, or how an artefact is related to a dig.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ./search-styles -->
+  
+  <!--Title bar -->
+  <div class="title-bar container">
+    <h2 class="aa-icon-help-circled">Help / Project info</h2>
+  </div>
+  
+  <!-- .about -->
+  <section class="col-layout">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>About Arcade</h3>
+          <h4>Who was involved?</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla scelerisque fringilla. Mauris magna massa, interdum non massa 
+            ut, pellentesque laoreet urna. Vivamus vel facilisis dolor, ac tincidunt metus. Sed lobortis dui ex. Aliquam ultrices diam sed erat rhoncus,
+            vel lacinia magna vulputate. Vivamus consequat cursus velit, id lobortis ipsum tempor id. Nam quis molestie mi.</p>
+        </div>
+        <div class="col-md-5 col-md-offset-1 callouts">
+          <div>
+            <img src="../lincoln/lincoln/media/img/landing/COLC_Black_Logo.png" />
+          </div>
+          <div>
+            <img src="../lincoln/lincoln/media/img/landing/GCI_logo_mini_black.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ./about -->
+  
+  <!-- .contact -->
+  <section class="background-secondary">
+    <div class="container">
+      <h3>Get in Touch</h3>
+      <p>Lincoln County Council<br />
+        City Hall<br />
+        Beaumont Fee<br />
+        Lincoln<br />
+        LN1 1DD<br />
+        Phone: 01522 881188<br />
+        Web: www.lincoln.gov.uk</p>
+    </div>
+  </section>
+  <!-- ./contact -->
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <ul class="list-inline">
+          <li><img src="../lincoln/lincoln/media/img/landing/colc_white.png" /></li>
+          <li><img src="../lincoln/lincoln/media/img/landing/getty_white.png" /></li>
+          <li><img src="../lincoln/lincoln/media/img/landing/arches_white.png" /></li>
+        </ul>
+        <p>&copy; 2018 Lincoln City Council. ARCADE is powered by Arches (v3.1), an open-source,
+          web-based, geospatial information system for cultural heritage inventory and management.</p>
+        <p>Arches, Arches Project, and the Arches logo are trademarks of the J. Paul Getty Trust and World Monuments Fund. </p>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.0/jquery-migrate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="https://arcade-test.lincoln.gov.uk/media/packages/knockout/build/output/knockout-latest.js"></script>
+
+
+  <script>
+    var ViewModel = function(first, last) {
+      this.showAuthMenu = ko.observable(false);
+    };
+    ko.applyBindings(new ViewModel());
+    
+    
+    // Scrolling offset..
+    (function($) {
+      $(document).ready(function() {
+        var offset = $('header').outerHeight() || 0;
+        $('body').scrollspy({offset: offset});
+        if (offset != 0) {
+          $('a').each(function(){
+            var me = $(this);
+            if (me.attr('href').indexOf('#') == 0) {
+              me.click(function(event) {
+                event.preventDefault();
+                
+                var hash = this.hash;
+                <!-- window.location.hash = this.hash -->
+                $('html, body').animate({
+                  scrollTop: ($(hash).offset().top -offset)
+                }, 800);
+              });
+            }
+          });
+        }
+      });
+    })(jQuery);
+  </script>
+
+</body>
+
+</html>

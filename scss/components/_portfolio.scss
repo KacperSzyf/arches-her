@@ -1,0 +1,70 @@
+.portfolio {
+  
+  padding-top: $line-height-computed * 2;
+  padding-bottom: $line-height-computed * 2;
+  
+  .entry {
+    display: block;
+    overflow-x: hidden;
+    position: relative;
+    > img {
+      height:$pf-image-height;
+      max-height:$pf-image-height;
+      width: auto;
+      max-width: auto;
+    }
+  
+    .ol {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      transition: all 0.6s ease-in-out;
+    }
+
+    .text {
+      position: absolute;
+      bottom:-100%;
+      width:100%;
+      max-height: 100%;
+      transition: all 0.6s ease-in-out;
+      
+      > div {
+        background: $pf-text-bg;
+        padding: $line-height-computed;
+      }
+    
+      p {
+        margin:0;
+        padding:0;
+        line-height: $line-height-computed;
+      }
+    }
+  
+    &:hover {
+      .ol {
+        background-color: $pf-overlay;
+      }
+    
+      .text {
+        bottom:0;
+      }
+    }
+  
+    h4 {
+      text-transform: uppercase;
+      color: #fff;
+      background: $pf-heading-bg;
+      text-align: center;
+      padding: 0;
+      margin:0;
+      width: 100%;
+      font-size: $pf-heading-font-size;
+      line-height: $pf-heading-font-size * 4;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}

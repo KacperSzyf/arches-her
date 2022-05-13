@@ -1,0 +1,115 @@
+// Bootstrap Vars
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "variables";
+$offset-of-bar: 50px;
+
+html {
+  overflow: hidden;
+}
+
+$panelHeight: ($offset-of-bar + $header-img-height-secondary + $header-border-width);
+
+body {
+  overflow-x: auto;
+  overflow-y: auto;
+  height:100%;
+  margin-top: $header-img-height-secondary + $header-border-width;
+}
+header nav ul.nav {
+  width: auto;
+}
+
+header#navbar {
+  top: $header-img-height-secondary + $header-border-width;
+  
+  .navbar-header::before {
+    background-color: $brand-primary;  
+  }
+}
+
+#mainnav-container,
+#mainnav {
+  background-color: $brand-primary;
+}
+
+#mainnav-container {
+  top: 0;
+  padding-top: (2 * $offset-of-bar);
+  #mainnav #mainnav-menu {
+    a:hover {
+      box-shadow:inset 4px 0 0 0 $brand-secondary;
+    }
+    > .active-sub,
+    > .active-link {
+       > a,
+       a:hover {
+         background-color: $brand-secondary;
+         color: $brand-primary;
+       }
+    }
+  }
+}
+
+#mainnav-menu-wrap {
+  padding:0;
+}
+
+.content-panel {
+  height: calc(100vh -  #{$panelHeight});
+}
+
+.search-control-container {
+  padding-bottom: 10px;
+}
+
+.card-form-preview-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.map-search-container {
+  height: calc(100vh - #{$panelHeight + $offset-of-bar + 10px});
+  
+  &.expanded-edit-map {
+    top: $panelHeight;
+    height: calc(100vh - #{$panelHeight});
+  }
+  
+  .map-search-container div .map-widget-panel {
+    height: calc(100vh - #{$panelHeight + $offset-of-bar + 10px});
+  }
+}
+
+.card-form-preview-container .tab-content .tab-pane > div,
+.saved-search-grid,
+.facets-search-container,
+.search-facets{
+  height: calc(100vh - #{$panelHeight + $offset-of-bar + 11px}) !important;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.widget-wrapper .mapboxgl-map {
+  margin-bottom: -20px;
+}
+
+/* V5 upgrade tweaks */
+.settings-panel {
+  .settings-panel-heading {
+    top: auto;
+  }
+  & > div:nth-child(2) {
+    margin-top: $offset-of-bar + 13px;
+  }
+}
+
+#content-container {
+  .scroll-y {
+    max-height: calc(100vh - 130px);
+    overflow-x: hidden;
+  }
+}
+
+#footer {
+  display: none
+}

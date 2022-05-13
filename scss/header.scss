@@ -1,0 +1,130 @@
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+@import "variables";
+
+body {
+  margin-top: $header-img-height;
+  
+  > header {
+    display:block;
+    position: fixed;
+    top: 0;
+    width: $header-width;
+    z-index: $zindex-navbar-fixed;
+    background: $header-background none;
+    border: $header-border-width solid $header-border-color;
+    border-width: 0 0 $header-border-width 0;
+    padding: 0;
+    color: $header-text-color;
+    min-height: $header-img-height-secondary;
+  
+    nav {
+      position: relative;
+      min-height: $header-img-height-secondary;
+      font-size: floor($font-size-base);
+      @include clearfix;
+    }
+  
+    .navbar-brand {
+      margin-left: 37px;
+      @include size($header-img-width-secondary, $header-img-height-secondary);
+      position:relative;
+      img {
+        position:absolute;
+        width:100%;
+        top:0;
+        bottom:0;
+        margin:auto;
+      }
+    }
+  
+    .navbar-nav {
+      
+      float:right;
+      right:0;
+      margin:0 0 0 0;
+      bottom:0;
+      position: absolute;
+      bottom:0;
+      max-width: 65%;
+      
+      > li {
+        float:left;
+        
+        a {
+          color: $header-text-color;
+          background: $header-background none;
+          &:link,
+          &:visited {
+            color: $header-text-color;
+            background: $header-background none;
+          }
+          &:active,
+          &:hover {
+            background: $header-text-color none;
+            color: $header-background;
+          }
+          font-size: $header-nav-text-size;
+          line-height: $header-nav-text-size;
+          & > * {
+            margin:0 0 0 0;
+            font-size: $header-nav-text-size - 1px;
+            line-height: $header-nav-text-size - 1px;
+          }
+        }
+        
+        &.active a {
+          &:link,
+          &:visited {
+            background: $header-text-color none;
+            color: $header-background;
+          }
+        }     
+        
+      }
+    }
+  }
+
+  // Homepage only twaeks to the header.
+  &.home-page {
+    > header {
+      
+      nav {
+        position: relative;
+      }
+      .navbar-brand {
+        margin-left: 0;
+        @include size($header-img-width-secondary, $header-img-height-secondary);
+      }
+    
+      // Responsive styles.
+      @media (min-width: $screen-sm-min) {
+        
+        min-height: $header-img-height;
+        nav {
+          min-height: $header-img-height;
+        }
+        .navbar-brand {
+          @include size($header-img-width, $header-img-height);
+        }
+      }
+  
+      @media (min-width: $screen-lg-min) {
+        text-align: center;
+    
+        .navbar-brand {
+          float: none;
+          display: block;
+          position: absolute;
+          margin-left: -($header-img-width / 2) !important;
+          padding: 0;
+          left: 50%;
+        }
+        .navbar-nav {
+          max-width: 45%;
+        }
+      } 
+    }
+  }
+}
