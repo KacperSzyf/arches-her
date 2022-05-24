@@ -50,7 +50,7 @@ define([
             };
 
             self.resourceDataConfig = {
-                activities: 'associated_activities',
+                activities: 'associated activities',
                 files: 'digital file(s)'
             }
 
@@ -58,6 +58,7 @@ define([
             self.descriptionCards = {};
             self.classificationCards = {};
             self.scientificDateCards = {};
+            self.assessmentCards = {};
             self.imagesCards = {};
             self.locationCards = {};
             self.protectionCards = {};

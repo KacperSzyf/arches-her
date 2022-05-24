@@ -34,6 +34,7 @@ define([
 
             self.descriptionDataConfig = {
                 audience: 'audience type',
+                citation: 'bibliographic source citation'
             };
 
             self.resourceDataConfig = {
@@ -42,7 +43,8 @@ define([
                 files: undefined,
                 assets: undefined,
                 translation: 'translation',
-                period: 'temporal coverage'
+                period: 'temporal coverage',
+                archive: undefined
             };
 
             self.locationDataConfig = {
